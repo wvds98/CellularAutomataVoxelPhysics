@@ -6,6 +6,7 @@
 
 ![shallow](https://github.com/wvds98/CellularAutomataVoxelPhysics/blob/main/images/shallow.png?raw=true)
 
+<br/>
 ## Description
 This project implements a c++ Cellular automata based fluid simulation added onto the Retro Voxel Template https://github.com/jbikker/WrldTmpl8.
 The relevant code can be found in the WaterWorld project, specifically the CAPE class (cape.h, cape.cpp), which implements the simulation. The scenario is initialized in
@@ -13,7 +14,7 @@ WaterWorld.cpp. It is particle-free simulation, where the state of the cells is 
 
 See the accompanying Master's Thesis PDF for more information.
 
-##How Does it Work?
+## How Does it Work?
 The simulation follows along the lines of a traditional Eulerian fluid simulation, trying to solve or approximate the Navier-Stokes equations, but
 does so only locally and restricts the movement of material to adjacent cells only. In this cellular automata style approach, values in the grid are updated
 as a function of values in its direct neighborhood. The simulation has been implemented on the GPU, using OpenCL.
