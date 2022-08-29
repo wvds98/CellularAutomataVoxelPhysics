@@ -7,6 +7,7 @@
 ![shallow](https://github.com/wvds98/CellularAutomataVoxelPhysics/blob/main/images/shallow.png?raw=true)
 
 <br/>
+
 ## Description
 This project implements a c++ Cellular automata based fluid simulation added onto the Retro Voxel Template https://github.com/jbikker/WrldTmpl8.
 The relevant code can be found in the WaterWorld project, specifically the CAPE class (cape.h, cape.cpp), which implements the simulation. The scenario is initialized in
