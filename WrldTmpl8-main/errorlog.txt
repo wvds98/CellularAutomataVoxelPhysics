@@ -1,0 +1,135 @@
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:287:5: warning: multiple unsequenced modifications to 'o' [-Wunsequenced]
+                                GRIDSTEP(exit1); // Turing and older have smaller L1I$, don't unroll
+                                ^~~~~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:207:39: note: expanded from macro 'GRIDSTEP'
+                p &= 7 + (7 << 10) + (7 << 20), o = --o << 8;                                                                                   \
+                                                  ~ ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:605:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:740:9: warning: 'GRIDWIDTH' macro redefined [-Wmacro-redefined]
+#define GRIDWIDTH 128
+        ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:98:9: note: previous definition is here
+#define GRIDWIDTH       (MAPWIDTH / BRICKDIM)
+        ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:741:9: warning: 'GRIDHEIGHT' macro redefined [-Wmacro-redefined]
+#define GRIDHEIGHT 128
+        ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:99:9: note: previous definition is here
+#define GRIDHEIGHT      (MAPHEIGHT / BRICKDIM)
+        ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:742:9: warning: 'GRIDDEPTH' macro redefined [-Wmacro-redefined]
+#define GRIDDEPTH 128
+        ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:100:9: note: previous definition is here
+#define GRIDDEPTH       (MAPDEPTH / BRICKDIM)
+        ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:787:87: warning: passing 'const __global unsigned short *__private' to parameter of type '__global unsigned short *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        bool ws = worldGet(x - CAPE_BRICKDIM,y - CAPE_BRICKDIM,z - CAPE_BRICKDIM, worldGrid, worldBricks) != 0;
+                                                                                             ^~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:743:110: note: passing argument to parameter 'brick' here
+uint worldGet(const uint x, const uint y, const uint z, __read_only image3d_t grid, __global unsigned short* brick)
+                                                                                                             ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:824:40: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        k += (IsCellStatic(x + 1, y, z, grid, brick_static, m0_bricks, worldGrid, worldBricks) == 0);
+                                              ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:825:40: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        k += (IsCellStatic(x - 1, y, z, grid, brick_static, m0_bricks, worldGrid, worldBricks) == 0);
+                                              ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:826:40: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        k += (IsCellStatic(x, y + 1, z, grid, brick_static, m0_bricks, worldGrid, worldBricks) == 0);
+                                              ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:827:40: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        k += (IsCellStatic(x, y - 1, z, grid, brick_static, m0_bricks, worldGrid, worldBricks) == 0);
+                                              ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:828:40: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        k += (IsCellStatic(x, y, z + 1, grid, brick_static, m0_bricks, worldGrid, worldBricks) == 0);
+                                              ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:829:40: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        k += (IsCellStatic(x, y, z - 1, grid, brick_static, m0_bricks, worldGrid, worldBricks) == 0);
+                                              ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:859:34: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        if (IsCellStatic(x, y, z, grid, brick_static, m0_bricks, worldGrid, worldBricks))
+                                        ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:868:65: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        float leftPressure = max(0.0f, IsCellStatic(x - 1, y, z, grid, brick_static, m0_bricks, worldGrid, worldBricks) ? cellPressure : GetData(x - 1, y, z, grid, p0_bricks));
+                                                                       ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:869:64: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        float botPressure = max(0.0f, IsCellStatic(x, y - 1, z, grid, brick_static, m0_bricks, worldGrid, worldBricks) ? cellPressure : GetData(x, y - 1,z, grid, p0_bricks));
+                                                                      ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:870:65: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        float backPressure = max(0.0f, IsCellStatic(x, y, z - 1, grid, brick_static, m0_bricks, worldGrid, worldBricks) ? cellPressure : GetData(x, y, z - 1, grid, p0_bricks));
+                                                                       ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:875:40: error: indirection requires pointer operand ('float' invalid)
+        float dampen = 1 - VELOCITY_DAMPENING * timestep;
+                                              ^ ~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:1127:43: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        bool staticc = IsCellStatic(x,y,z, grid, brick_static, m0_bricks, worldGrid, worldBricks);
+                                                 ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:1128:60: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        bool staticx = staticc || IsCellStatic(x - 1, y, z, grid, brick_static, m0_bricks, worldGrid, worldBricks);
+                                                                  ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:1129:60: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        bool staticy = staticc || IsCellStatic(x, y - 1, z, grid, brick_static, m0_bricks, worldGrid, worldBricks);
+                                                                  ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:1130:60: warning: incompatible pointer types passing '__global bool *__private' to parameter of type '__global char *' [-Wincompatible-pointer-types]
+        bool staticz = staticc || IsCellStatic(x, y, z - 1, grid, brick_static, m0_bricks, worldGrid, worldBricks);
+                                                                  ^~~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:775:97: note: passing argument to parameter 'brick_static' here
+bool IsCellStatic(const uint x, const uint y, const uint z, __global uint* grid, __global char* brick_static, __global float* m0_bricks, __read_only image3d_t worldGrid, __global const unsigned short* worldBricks)
+                                                                                                ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:1262:79: warning: passing 'const __global unsigned short *__private' to parameter of type '__global unsigned short *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                        worldSet(x - CAPE_BRICKDIM,y - CAPE_BRICKDIM,z - CAPE_BRICKDIM, worldGrid, worldBricks, zeroes, 0);
+                                                                                                   ^~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:757:111: note: passing argument to parameter 'brick' here
+void worldSet(const uint x, const uint y, const uint z, __write_only image3d_t grid, __global unsigned short* brick, __global uint* zeroes,  uint v)
+                                                                                                              ^
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:1267:79: warning: passing 'const __global unsigned short *__private' to parameter of type '__global unsigned short *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                        worldSet(x - CAPE_BRICKDIM,y - CAPE_BRICKDIM,z - CAPE_BRICKDIM, worldGrid, worldBricks, zeroes, LerpToRGB(0, g, b));
+                                                                                                   ^~~~~~~~~~~
+C:\Users\wvds9\AppData\Local\Temp\comgr-9696af\input\CompileSource:757:111: note: passing argument to parameter 'brick' here
+void worldSet(const uint x, const uint y, const uint z, __write_only image3d_t grid, __global unsigned short* brick, __global uint* zeroes,  uint v)
+                                                                                                              ^
+22 warnings and 1 error generated.
+Error: Failed to compile opencl source (from CL or HIP source to LLVM IR).
+ 
