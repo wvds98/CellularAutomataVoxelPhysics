@@ -1,10 +1,10 @@
 ## Cellular Automata Retro Voxel Fluids
 
-![alt text](https://github.com/wvds98/CellularAutomataVoxelPhysics/images/tsunami.png)
+![tsunami](https://github.com/wvds98/CellularAutomataVoxelPhysics/blob/main/images/tsunami.png?raw=true)
 
-![alt text](https://github.com/wvds98/CellularAutomataVoxelPhysics/images/dambreak.png)
+![dambreak](https://github.com/wvds98/CellularAutomataVoxelPhysics/blob/main/images/dambreak.png?raw=true)
 
-![alt text](https://github.com/wvds98/CellularAutomataVoxelPhysics/images/shallow.png)
+![shallow](https://github.com/wvds98/CellularAutomataVoxelPhysics/blob/main/images/shallow.png?raw=true)
 
 ## Description
 This project implements a c++ Cellular automata based fluid simulation added onto the Retro Voxel Template https://github.com/jbikker/WrldTmpl8.
