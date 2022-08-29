@@ -9,9 +9,10 @@
 <br/>
 
 ## Description
-This project implements a c++ Cellular automata based fluid simulation added onto the Retro Voxel Template https://github.com/jbikker/WrldTmpl8.
-The relevant code can be found in the WaterWorld project, specifically the CAPE class (cape.h, cape.cpp), which implements the simulation. The scenario is initialized in
-WaterWorld.cpp. It is particle-free simulation, where the state of the cells is directly transformed to voxels in the world.
+This project implements a c++ Cellular automata based fluid simulation added onto the Retro Voxel Template https://github.com/jbikker/WrldTmpl8. The simulation is designed
+so that new rules modelling more effects, like heat flow, can be easily added as additional independent kernels. The relevant code can be found in the WaterWorld project,
+specifically the CAPE class (cape.h, cape.cpp), which implements the simulation. The scenario is initialized in WaterWorld.cpp. It is particle-free simulation,
+where the state of the cells is directly transformed to voxels in the world.
 
 See the accompanying Master's Thesis PDF for more information.
 
