@@ -34,14 +34,14 @@ The simulation pipeline is as follows:
 5. Solve pressure: Iteratively determine a pressure value that will allow us to correct the flow to be mass conserving
 6. Apply this correction, and finalize flow by enforcing some constraints.
 
-##Configuring the simulation
+## Configuring the simulation
 An initial simulation scenario is provided and set up in waterworld.cpp. Parameters of the simulation can be tweaked in cape.h and cape.cl.
 Some parameters are duplicated in the cape.cl kernel and cape.h, mind that the gpu kernel uses those defined there.
 
 As an additional tip, by mindful and try to box the fluid in a bit, or atleast use decent evaporation levels. Letting a little bit of water
 spread into nothingness across a large plane can be costly performance wise.
 
-#Invisible Red voxels
+# Invisible Red voxels
 For thesis scenario demonstration purposes I simply made red voxels be considered transparant in the renderer
 to edit this, goto trace.cl line ~51:
 v = brick0[v]; if (v && v != RED) 
