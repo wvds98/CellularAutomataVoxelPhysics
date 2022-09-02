@@ -41,8 +41,7 @@ Some parameters are duplicated in the cape.cl kernel and cape.h, mind that the g
 As an additional tip, by mindful and try to box the fluid in a bit, or atleast use decent evaporation levels. Letting a little bit of water
 spread into nothingness across a large plane can be costly performance wise.
 
-# Invisible Red voxels
+### Renderer - Invisible Red voxels
 For thesis scenario demonstration purposes I simply made red voxels be considered transparant in the renderer
 to edit this, goto trace.cl line ~51:
 v = brick0[v]; if (v && v != RED) 
-
