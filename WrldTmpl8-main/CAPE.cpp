@@ -101,7 +101,7 @@ void CAPE::ReallocBricks()
 //Remove brick from active bricks buffer
 void CAPE::FreeBrick(uint i)
 {
-	return;
+	return; //Temporarily disable
 	uint brick_addr = BIX(brick_x[i], brick_y[i], brick_z[i]);
 	bricks_killed++;
 	brick_x[i] = UINT32_MAX; //Mark as dead
@@ -799,7 +799,6 @@ void CAPE::Tick(float deltaTime)
 
 	for (int i = 0; i < SIMS_PER_RENDER; i++)
 	{
-
 		updates++;
 		if (updates > SIMS_PER_RENDER)//I have no clue, but there is some sort of race condition if we try to run the simulation on the first visit
 		{
@@ -816,9 +815,6 @@ void CAPE::Tick(float deltaTime)
 			brick_oa_buffer->CopyToDevice(false);
 			brick_jobs_buffer->CopyToDevice(false);
 			SetKernelArguments();
-
-			//Execute main pipeline
-			float pipeline_start = timer.elapsed();
 
 			//Step 0: Update bricks
 			ExecuteGPUBrickUpdate();
@@ -846,19 +842,13 @@ void CAPE::Tick(float deltaTime)
 
 			clFinish(capeKernel->GetQueue());
 
-			pipelineTime += (timer.elapsed() - pipeline_start);
-
 			for (int i = 0; i < bricks_allocated; i++) //Jobs done
 				brick_jobs[i] = UINT32_MAX;
-
-			simulationTime += timer.elapsed();
 		}
 	}
 
 	if (updates > SIMS_PER_RENDER)
 		PrintState();
-
-	timer2.reset();
 }
 
 //Retrieves amount of incoming momentum on the X-axis from tangential moving material across the y and z axis
@@ -991,10 +981,7 @@ void CAPE::PrintState()
 	printf("WorldSet OpenCl Execution time is: %0.3f milliseconds \n", KernelExecutionTime(worldSetEvent));
 	float pipelinekerneltime = KernelExecutionTime(materialAdvectionEvent) + KernelExecutionTime(velocityAdvectionEvent) + KernelExecutionTime(divergenceEvent)
 		+ KernelExecutionTime(pressureSolverEvent) * 8 + KernelExecutionTime(pressureGradientEvent) + KernelExecutionTime(worldSetEvent);
-	cout << "pipelinetime: " << pipelineTime / updates * 1000 << " milliseconds" << endl;
 	cout << "pipelinekerneltime: " << pipelinekerneltime << " milliseconds" << endl;
-
-	float pipelineTime = (advectTime + velupdateTime + divergenceupdatetime + pressuresolvetime + pressuregradienttime);
 
 	float potpipelinekernelUpdates = 1000 / (pipelinekerneltime);
 

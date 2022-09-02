@@ -3,6 +3,7 @@
 namespace Tmpl8
 {
 
+	// MANY PARAMS NOT USED BY GPU IMPLEMENTATION, LOCALLY REDIFINED IN CL FILE
 	// CAPE - Cellular Automata Physics Engine
     #define USECONCURRENCY 0
     #define PRESSURE_ITERATIONS 8
@@ -28,7 +29,7 @@ namespace Tmpl8
 
 	//0.333 is maximum 100% save speed, use up to 1.0f for less clamping and faster flowing water (less viscous), but requires that an appropriate
 	//timestep is selected by the user, or simulation may blow up if local velocity becomes too high and negative mass is created
-    #define MAXV 1.0f //0.33f
+    #define MAXV 0.33f
 
 	class CAPE
 	{

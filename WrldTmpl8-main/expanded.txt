@@ -1,5 +1,4 @@
-#define ISAMPERE
-#define ISNVIDIA
+#define ISAMD
 // default screen resolution
 #define SCRWIDTH	1600
 #define SCRHEIGHT	1024
